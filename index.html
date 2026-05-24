@@ -7,6 +7,7 @@
     <meta
       name="description"
       content="Portafolio de Jokrat, desarrollador con conocimientos en JavaScript, Python, HTML, CSS, SQL y MongoDB."
+      data-i18n-content="meta.description"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,35 +15,45 @@
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
     <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio" data-i18n-aria="brand.home">
         <span class="brand-mark">J</span>
         <span>Jokrat</span>
       </a>
-      <nav class="nav" aria-label="Navegacion principal">
-        <a href="#perfil">Perfil</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#aprendizaje">Aprendizaje</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Navegacion principal" data-i18n-aria="nav.main">
+          <a href="#perfil" data-i18n="nav.profile">Perfil</a>
+          <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
+          <a href="#aprendizaje" data-i18n="nav.learning">Aprendizaje</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+        <div class="language-switcher" aria-label="Selector de idioma" data-i18n-aria="language.label">
+          <button class="language-button is-active" type="button" data-lang="es" aria-pressed="true">
+            ES
+          </button>
+          <button class="language-button" type="button" data-lang="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero" id="inicio">
         <div class="hero-copy">
-          <p class="eyebrow">Desarrollo web, datos y ciberseguridad</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Desarrollo web, datos y ciberseguridad</p>
           <h1>Jokrat</h1>
-          <p class="lead">
+          <p class="lead" data-i18n="hero.lead">
             Construyo bases solidas en software combinando JavaScript, Python,
             HTML, CSS, SQL y MongoDB. Actualmente estoy profundizando en Linux
             y Fundamentos de la Ciberseguridad.
           </p>
-          <div class="hero-actions" aria-label="Acciones principales">
-            <a class="primary-link" href="#contacto">Contactar</a>
-            <a class="secondary-link" href="#habilidades">Ver habilidades</a>
+          <div class="hero-actions" aria-label="Acciones principales" data-i18n-aria="hero.actions">
+            <a class="primary-link" href="#contacto" data-i18n="hero.contact">Contactar</a>
+            <a class="secondary-link" href="#habilidades" data-i18n="hero.skills">Ver habilidades</a>
           </div>
         </div>
 
-        <aside class="terminal-panel" aria-label="Resumen tecnico">
+        <aside class="terminal-panel" aria-label="Resumen tecnico" data-i18n-aria="terminal.label">
           <div class="terminal-bar">
             <span></span>
             <span></span>
@@ -54,13 +65,13 @@
 
       <section class="section" id="perfil">
         <div class="section-heading">
-          <p class="eyebrow">Perfil</p>
-          <h2>Un perfil tecnico en crecimiento</h2>
+          <p class="eyebrow" data-i18n="profile.eyebrow">Perfil</p>
+          <h2 data-i18n="profile.title">Un perfil tecnico en crecimiento</h2>
         </div>
         <div class="profile-grid">
           <article>
-            <h3>Sobre mi</h3>
-            <p>
+            <h3 data-i18n="profile.aboutTitle">Sobre mi</h3>
+            <p data-i18n="profile.aboutText">
               Soy Jokrat, una persona enfocada en aprender, practicar y crear
               soluciones con tecnologia. Me interesa entender tanto la parte
               visual de una aplicacion como la logica, los datos y la seguridad
@@ -68,8 +79,8 @@
             </p>
           </article>
           <article>
-            <h3>Forma de trabajo</h3>
-            <p>
+            <h3 data-i18n="profile.workTitle">Forma de trabajo</h3>
+            <p data-i18n="profile.workText">
               Me gusta avanzar con bases claras: escribir codigo legible,
               ordenar ideas, resolver problemas por partes y mejorar cada
               proyecto con lo aprendido.
@@ -80,30 +91,30 @@
 
       <section class="section" id="habilidades">
         <div class="section-heading">
-          <p class="eyebrow">Stack</p>
-          <h2>Habilidades principales</h2>
+          <p class="eyebrow" data-i18n="skills.eyebrow">Stack</p>
+          <h2 data-i18n="skills.title">Habilidades principales</h2>
         </div>
         <div class="skills-grid">
           <article class="skill-card" data-skill="frontend">
             <span class="skill-tag">Frontend</span>
             <h3>HTML, CSS y JavaScript</h3>
-            <p>
+            <p data-i18n="skills.frontendText">
               Estructura, estilos responsivos e interacciones para interfaces
               web limpias y funcionales.
             </p>
           </article>
           <article class="skill-card" data-skill="backend">
-            <span class="skill-tag">Programacion</span>
+            <span class="skill-tag" data-i18n="skills.programmingTag">Programacion</span>
             <h3>Python y JavaScript</h3>
-            <p>
+            <p data-i18n="skills.backendText">
               Logica de aplicacion, automatizacion, scripts y resolucion de
               problemas con enfoque practico.
             </p>
           </article>
           <article class="skill-card" data-skill="data">
-            <span class="skill-tag">Datos</span>
+            <span class="skill-tag" data-i18n="skills.dataTag">Datos</span>
             <h3>SQL y MongoDB</h3>
-            <p>
+            <p data-i18n="skills.dataText">
               Manejo de datos relacionales y documentales para consultar,
               organizar y modelar informacion.
             </p>
@@ -113,15 +124,15 @@
 
       <section class="section learning-section" id="aprendizaje">
         <div class="section-heading">
-          <p class="eyebrow">Ahora</p>
-          <h2>En aprendizaje activo</h2>
+          <p class="eyebrow" data-i18n="learning.eyebrow">Ahora</p>
+          <h2 data-i18n="learning.title">En aprendizaje activo</h2>
         </div>
         <div class="timeline">
           <article>
             <span>01</span>
             <div>
               <h3>Linux</h3>
-              <p>
+              <p data-i18n="learning.linuxText">
                 Comandos, terminal, permisos, estructura del sistema y flujo de
                 trabajo para entornos tecnicos.
               </p>
@@ -130,8 +141,8 @@
           <article>
             <span>02</span>
             <div>
-              <h3>Fundamentos de la Ciberseguridad</h3>
-              <p>
+              <h3 data-i18n="learning.cyberTitle">Fundamentos de la Ciberseguridad</h3>
+              <p data-i18n="learning.cyberText">
                 Conceptos base de seguridad, buenas practicas, riesgos,
                 defensa y pensamiento analitico.
               </p>
@@ -142,9 +153,9 @@
 
       <section class="contact-section" id="contacto">
         <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Listo para seguir creando</h2>
-          <p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+          <h2 data-i18n="contact.title">Listo para seguir creando</h2>
+          <p data-i18n="contact.text">
             Este espacio puede conectarse luego con tu correo, GitHub, LinkedIn
             o proyectos destacados.
           </p>
@@ -153,23 +164,27 @@
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jokrat.dev@gmail.com&su=Contacto%20desde%20tu%20portafolio" 
           target="_blank" 
           rel="noopener noreferrer" 
-          aria-label="Enviar correo a Jokrat">Correo</a>
+          aria-label="Enviar correo a Jokrat"
+          data-i18n-aria="contact.emailAria"
+          data-i18n="contact.email">Correo</a>
           <a 
           href="https://github.com/j0krat"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Ver GitHub de Jokrat">GitHub</a>
+          aria-label="Ver GitHub de Jokrat"
+          data-i18n-aria="contact.githubAria">GitHub</a>
           <a 
           href="https://www.linkedin.com/in/joaquín-vejar-35517b411/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Ver LinkedIn de Jokrat">LinkedIn</a>
+          aria-label="Ver LinkedIn de Jokrat"
+          data-i18n-aria="contact.linkedinAria">LinkedIn</a>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Jokrat | Portafolio personal</p>
+      <p data-i18n="footer.text">Jokrat | Portafolio personal</p>
     </footer>
 
     <script src="script.js"></script>
